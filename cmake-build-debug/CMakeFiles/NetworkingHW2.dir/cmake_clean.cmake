@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/NetworkingHW2.dir/main.cpp.obj"
+  "CMakeFiles/NetworkingHW2.dir/Package.cpp.obj"
+  "CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj"
   "NetworkingHW2.pdb"
   "NetworkingHW2.exe"
   "NetworkingHW2.exe.manifest"

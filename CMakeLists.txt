@@ -3,4 +3,4 @@ project(NetworkingHW2)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(NetworkingHW2 main.cpp)
+add_executable(NetworkingHW2 main.cpp Package.cpp WaitQueue.cpp)

@@ -122,6 +122,60 @@ NetworkingHW2/fast:
 	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/build
 .PHONY : NetworkingHW2/fast
 
+Package.obj: Package.cpp.obj
+
+.PHONY : Package.obj
+
+# target to build an object file
+Package.cpp.obj:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Package.cpp.obj
+.PHONY : Package.cpp.obj
+
+Package.i: Package.cpp.i
+
+.PHONY : Package.i
+
+# target to preprocess a source file
+Package.cpp.i:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Package.cpp.i
+.PHONY : Package.cpp.i
+
+Package.s: Package.cpp.s
+
+.PHONY : Package.s
+
+# target to generate assembly for a file
+Package.cpp.s:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Package.cpp.s
+.PHONY : Package.cpp.s
+
+WaitQueue.obj: WaitQueue.cpp.obj
+
+.PHONY : WaitQueue.obj
+
+# target to build an object file
+WaitQueue.cpp.obj:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj
+.PHONY : WaitQueue.cpp.obj
+
+WaitQueue.i: WaitQueue.cpp.i
+
+.PHONY : WaitQueue.i
+
+# target to preprocess a source file
+WaitQueue.cpp.i:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.i
+.PHONY : WaitQueue.cpp.i
+
+WaitQueue.s: WaitQueue.cpp.s
+
+.PHONY : WaitQueue.s
+
+# target to generate assembly for a file
+WaitQueue.cpp.s:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.s
+.PHONY : WaitQueue.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +212,12 @@ help:
 	@echo ... edit_cache
 	@echo ... NetworkingHW2
 	@echo ... rebuild_cache
+	@echo ... Package.obj
+	@echo ... Package.i
+	@echo ... Package.s
+	@echo ... WaitQueue.obj
+	@echo ... WaitQueue.i
+	@echo ... WaitQueue.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
