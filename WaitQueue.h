@@ -7,6 +7,7 @@
 #ifndef NETWORKINGHW2_WAITQUEUE_H
 #define NETWORKINGHW2_WAITQUEUE_H
 
+using std::vector;
 
 class WaitQueue {
 public:
