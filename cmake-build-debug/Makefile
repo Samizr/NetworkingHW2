@@ -149,6 +149,33 @@ Event.cpp.s:
 	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Event.cpp.s
 .PHONY : Event.cpp.s
 
+InputChannel.obj: InputChannel.cpp.obj
+
+.PHONY : InputChannel.obj
+
+# target to build an object file
+InputChannel.cpp.obj:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/InputChannel.cpp.obj
+.PHONY : InputChannel.cpp.obj
+
+InputChannel.i: InputChannel.cpp.i
+
+.PHONY : InputChannel.i
+
+# target to preprocess a source file
+InputChannel.cpp.i:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/InputChannel.cpp.i
+.PHONY : InputChannel.cpp.i
+
+InputChannel.s: InputChannel.cpp.s
+
+.PHONY : InputChannel.s
+
+# target to generate assembly for a file
+InputChannel.cpp.s:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/InputChannel.cpp.s
+.PHONY : InputChannel.cpp.s
+
 Package.obj: Package.cpp.obj
 
 .PHONY : Package.obj
@@ -230,33 +257,6 @@ WaitQueue.cpp.s:
 	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.s
 .PHONY : WaitQueue.cpp.s
 
-inputChannel.obj: inputChannel.cpp.obj
-
-.PHONY : inputChannel.obj
-
-# target to build an object file
-inputChannel.cpp.obj:
-	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/inputChannel.cpp.obj
-.PHONY : inputChannel.cpp.obj
-
-inputChannel.i: inputChannel.cpp.i
-
-.PHONY : inputChannel.i
-
-# target to preprocess a source file
-inputChannel.cpp.i:
-	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/inputChannel.cpp.i
-.PHONY : inputChannel.cpp.i
-
-inputChannel.s: inputChannel.cpp.s
-
-.PHONY : inputChannel.s
-
-# target to generate assembly for a file
-inputChannel.cpp.s:
-	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/inputChannel.cpp.s
-.PHONY : inputChannel.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -296,6 +296,9 @@ help:
 	@echo ... Event.obj
 	@echo ... Event.i
 	@echo ... Event.s
+	@echo ... InputChannel.obj
+	@echo ... InputChannel.i
+	@echo ... InputChannel.s
 	@echo ... Package.obj
 	@echo ... Package.i
 	@echo ... Package.s
@@ -305,9 +308,6 @@ help:
 	@echo ... WaitQueue.obj
 	@echo ... WaitQueue.i
 	@echo ... WaitQueue.s
-	@echo ... inputChannel.obj
-	@echo ... inputChannel.i
-	@echo ... inputChannel.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

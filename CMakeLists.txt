@@ -3,4 +3,4 @@ project(NetworkingHW2)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(NetworkingHW2 main.cpp Package.cpp WaitQueue.cpp Event.cpp Event.h Simulator.cpp Simulator.h inputChannel.cpp inputChannel.h)
+add_executable(NetworkingHW2 main.cpp Package.cpp WaitQueue.cpp Event.cpp Event.h Simulator.cpp MinHeap.h Simulator.h InputChannel.cpp InputChannel.h)

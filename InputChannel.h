@@ -6,7 +6,7 @@
 #define NETWORKINGHW2_INPUTCHANNEL_H
 
 
-class inputChannel {
+class InputChannel {
 private:
 
 };

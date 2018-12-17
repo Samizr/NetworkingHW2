@@ -7,13 +7,18 @@
 
 #include <vector>
 #include "WaitQueue.h"
+#include "InputChannel.h"
+#include <algorithm>
+#include "Event.h"
+#include "MinHeap.h"
 
 using std::vector;
 
 class Simulator {
 private:
     vector<WaitQueue> outputQueues;
-    vector<float> input;
+    vector<InputChannel> inputQueues;
+    MinHeap<Event> events;
 };
 
 
