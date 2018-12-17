@@ -16,9 +16,13 @@ using std::vector;
 
 class Simulator {
 private:
+    int N, M, T;
     vector<WaitQueue> outputQueues;
     vector<InputChannel> inputQueues;
     MinHeap<Event> events;
+public:
+    Simulator(int N, int M, int T, vector<vector<double>> allProbabilities);
+    void run();
 };
 
 
