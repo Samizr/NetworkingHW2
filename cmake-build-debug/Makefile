@@ -176,6 +176,33 @@ Package.cpp.s:
 	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Package.cpp.s
 .PHONY : Package.cpp.s
 
+Simulator.obj: Simulator.cpp.obj
+
+.PHONY : Simulator.obj
+
+# target to build an object file
+Simulator.cpp.obj:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj
+.PHONY : Simulator.cpp.obj
+
+Simulator.i: Simulator.cpp.i
+
+.PHONY : Simulator.i
+
+# target to preprocess a source file
+Simulator.cpp.i:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Simulator.cpp.i
+.PHONY : Simulator.cpp.i
+
+Simulator.s: Simulator.cpp.s
+
+.PHONY : Simulator.s
+
+# target to generate assembly for a file
+Simulator.cpp.s:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Simulator.cpp.s
+.PHONY : Simulator.cpp.s
+
 WaitQueue.obj: WaitQueue.cpp.obj
 
 .PHONY : WaitQueue.obj
@@ -202,6 +229,33 @@ WaitQueue.s: WaitQueue.cpp.s
 WaitQueue.cpp.s:
 	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.s
 .PHONY : WaitQueue.cpp.s
+
+inputChannel.obj: inputChannel.cpp.obj
+
+.PHONY : inputChannel.obj
+
+# target to build an object file
+inputChannel.cpp.obj:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/inputChannel.cpp.obj
+.PHONY : inputChannel.cpp.obj
+
+inputChannel.i: inputChannel.cpp.i
+
+.PHONY : inputChannel.i
+
+# target to preprocess a source file
+inputChannel.cpp.i:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/inputChannel.cpp.i
+.PHONY : inputChannel.cpp.i
+
+inputChannel.s: inputChannel.cpp.s
+
+.PHONY : inputChannel.s
+
+# target to generate assembly for a file
+inputChannel.cpp.s:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/inputChannel.cpp.s
+.PHONY : inputChannel.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -245,9 +299,15 @@ help:
 	@echo ... Package.obj
 	@echo ... Package.i
 	@echo ... Package.s
+	@echo ... Simulator.obj
+	@echo ... Simulator.i
+	@echo ... Simulator.s
 	@echo ... WaitQueue.obj
 	@echo ... WaitQueue.i
 	@echo ... WaitQueue.s
+	@echo ... inputChannel.obj
+	@echo ... inputChannel.i
+	@echo ... inputChannel.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
