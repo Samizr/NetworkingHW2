@@ -82,16 +82,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/Event.cpp">
+			<Option target="NetworkingHW2"/>
+		</Unit>
+		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/Event.h">
+			<Option target="NetworkingHW2"/>
+		</Unit>
 		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/Package.cpp">
 			<Option target="NetworkingHW2"/>
 		</Unit>
 		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/Package.h">
 			<Option target="NetworkingHW2"/>
 		</Unit>
-		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/cmake-build-debug/WaitQueue.cpp">
+		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/WaitQueue.cpp">
 			<Option target="NetworkingHW2"/>
 		</Unit>
-		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/cmake-build-debug/WaitQueue.h">
+		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/WaitQueue.h">
 			<Option target="NetworkingHW2"/>
 		</Unit>
 		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/main.cpp">

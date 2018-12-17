@@ -105,17 +105,17 @@ CMakeFiles/NetworkingHW2.dir/Package.cpp.obj.provides.build: CMakeFiles/Networki
 
 
 CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj: CMakeFiles/NetworkingHW2.dir/flags.make
-CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj: WaitQueue.cpp
+CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj: ../WaitQueue.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Sami\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj"
-	C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkingHW2.dir\WaitQueue.cpp.obj -c C:\Users\Sami\Documents\GitHub\NetworkingHW2\cmake-build-debug\WaitQueue.cpp
+	C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkingHW2.dir\WaitQueue.cpp.obj -c C:\Users\Sami\Documents\GitHub\NetworkingHW2\WaitQueue.cpp
 
 CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.i"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Sami\Documents\GitHub\NetworkingHW2\cmake-build-debug\WaitQueue.cpp > CMakeFiles\NetworkingHW2.dir\WaitQueue.cpp.i
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Sami\Documents\GitHub\NetworkingHW2\WaitQueue.cpp > CMakeFiles\NetworkingHW2.dir\WaitQueue.cpp.i
 
 CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.s"
-	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Sami\Documents\GitHub\NetworkingHW2\cmake-build-debug\WaitQueue.cpp -o CMakeFiles\NetworkingHW2.dir\WaitQueue.cpp.s
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Sami\Documents\GitHub\NetworkingHW2\WaitQueue.cpp -o CMakeFiles\NetworkingHW2.dir\WaitQueue.cpp.s
 
 CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj.requires:
 
@@ -128,11 +128,36 @@ CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj.provides: CMakeFiles/NetworkingHW
 CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj.provides.build: CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj
 
 
+CMakeFiles/NetworkingHW2.dir/Event.cpp.obj: CMakeFiles/NetworkingHW2.dir/flags.make
+CMakeFiles/NetworkingHW2.dir/Event.cpp.obj: ../Event.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Sami\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NetworkingHW2.dir/Event.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkingHW2.dir\Event.cpp.obj -c C:\Users\Sami\Documents\GitHub\NetworkingHW2\Event.cpp
+
+CMakeFiles/NetworkingHW2.dir/Event.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkingHW2.dir/Event.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Sami\Documents\GitHub\NetworkingHW2\Event.cpp > CMakeFiles\NetworkingHW2.dir\Event.cpp.i
+
+CMakeFiles/NetworkingHW2.dir/Event.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkingHW2.dir/Event.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Sami\Documents\GitHub\NetworkingHW2\Event.cpp -o CMakeFiles\NetworkingHW2.dir\Event.cpp.s
+
+CMakeFiles/NetworkingHW2.dir/Event.cpp.obj.requires:
+
+.PHONY : CMakeFiles/NetworkingHW2.dir/Event.cpp.obj.requires
+
+CMakeFiles/NetworkingHW2.dir/Event.cpp.obj.provides: CMakeFiles/NetworkingHW2.dir/Event.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Event.cpp.obj.provides.build
+.PHONY : CMakeFiles/NetworkingHW2.dir/Event.cpp.obj.provides
+
+CMakeFiles/NetworkingHW2.dir/Event.cpp.obj.provides.build: CMakeFiles/NetworkingHW2.dir/Event.cpp.obj
+
+
 # Object files for target NetworkingHW2
 NetworkingHW2_OBJECTS = \
 "CMakeFiles/NetworkingHW2.dir/main.cpp.obj" \
 "CMakeFiles/NetworkingHW2.dir/Package.cpp.obj" \
-"CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj"
+"CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj" \
+"CMakeFiles/NetworkingHW2.dir/Event.cpp.obj"
 
 # External object files for target NetworkingHW2
 NetworkingHW2_EXTERNAL_OBJECTS =
@@ -140,11 +165,12 @@ NetworkingHW2_EXTERNAL_OBJECTS =
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/main.cpp.obj
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/Package.cpp.obj
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj
+NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/Event.cpp.obj
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/build.make
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/linklibs.rsp
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/objects1.rsp
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Sami\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable NetworkingHW2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Sami\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable NetworkingHW2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\NetworkingHW2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -155,6 +181,7 @@ CMakeFiles/NetworkingHW2.dir/build: NetworkingHW2.exe
 CMakeFiles/NetworkingHW2.dir/requires: CMakeFiles/NetworkingHW2.dir/main.cpp.obj.requires
 CMakeFiles/NetworkingHW2.dir/requires: CMakeFiles/NetworkingHW2.dir/Package.cpp.obj.requires
 CMakeFiles/NetworkingHW2.dir/requires: CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj.requires
+CMakeFiles/NetworkingHW2.dir/requires: CMakeFiles/NetworkingHW2.dir/Event.cpp.obj.requires
 
 .PHONY : CMakeFiles/NetworkingHW2.dir/requires
 

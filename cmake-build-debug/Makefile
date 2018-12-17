@@ -122,6 +122,33 @@ NetworkingHW2/fast:
 	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/build
 .PHONY : NetworkingHW2/fast
 
+Event.obj: Event.cpp.obj
+
+.PHONY : Event.obj
+
+# target to build an object file
+Event.cpp.obj:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Event.cpp.obj
+.PHONY : Event.cpp.obj
+
+Event.i: Event.cpp.i
+
+.PHONY : Event.i
+
+# target to preprocess a source file
+Event.cpp.i:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Event.cpp.i
+.PHONY : Event.cpp.i
+
+Event.s: Event.cpp.s
+
+.PHONY : Event.s
+
+# target to generate assembly for a file
+Event.cpp.s:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Event.cpp.s
+.PHONY : Event.cpp.s
+
 Package.obj: Package.cpp.obj
 
 .PHONY : Package.obj
@@ -212,6 +239,9 @@ help:
 	@echo ... edit_cache
 	@echo ... NetworkingHW2
 	@echo ... rebuild_cache
+	@echo ... Event.obj
+	@echo ... Event.i
+	@echo ... Event.s
 	@echo ... Package.obj
 	@echo ... Package.i
 	@echo ... Package.s
