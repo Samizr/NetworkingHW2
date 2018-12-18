@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "Simulator.h"
 
 using std::cout;
 using std::endl;
@@ -39,7 +40,10 @@ int main(int argc, char *argv[]) {
     //FILL OUTPUT CHANNEL POISSON PARAMETERS:
     vector<double> mus = parseNumbersD(argv, &argID, M);
 
+    Simulator simulation(T, N, M, probabilities, lambdas, queueSizes, mus);
 
+
+return 0;
 }
 
 

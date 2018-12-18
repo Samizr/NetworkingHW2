@@ -7,7 +7,7 @@
 
 #include <vector>
 #include "Package.h"
-#include "Event.h"
+//#include "Event.h"
 
 using std::vector;
 
@@ -16,10 +16,13 @@ private:
     vector<double> probabilities;
     double lambda;
 public :
+    InputChannel();
 
-    explicit InputChannel(const vector<double>& probabilities, double lambda);
-    int processPackage(const Package& package);
-    Event generateInEvent(int currentTime);
+    explicit InputChannel(const vector<double> &probabilities, double lambda);
+
+    int processPackage(const Package &package);
+
+    double getDistributionVariable();
 
 };
 

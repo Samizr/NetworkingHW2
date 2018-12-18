@@ -176,6 +176,33 @@ InputChannel.cpp.s:
 	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/InputChannel.cpp.s
 .PHONY : InputChannel.cpp.s
 
+Package.obj: Package.cpp.obj
+
+.PHONY : Package.obj
+
+# target to build an object file
+Package.cpp.obj:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Package.cpp.obj
+.PHONY : Package.cpp.obj
+
+Package.i: Package.cpp.i
+
+.PHONY : Package.i
+
+# target to preprocess a source file
+Package.cpp.i:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Package.cpp.i
+.PHONY : Package.cpp.i
+
+Package.s: Package.cpp.s
+
+.PHONY : Package.s
+
+# target to generate assembly for a file
+Package.cpp.s:
+	$(MAKE) -f CMakeFiles\NetworkingHW2.dir\build.make CMakeFiles/NetworkingHW2.dir/Package.cpp.s
+.PHONY : Package.cpp.s
+
 Simulator.obj: Simulator.cpp.obj
 
 .PHONY : Simulator.obj
@@ -272,6 +299,9 @@ help:
 	@echo ... InputChannel.obj
 	@echo ... InputChannel.i
 	@echo ... InputChannel.s
+	@echo ... Package.obj
+	@echo ... Package.i
+	@echo ... Package.s
 	@echo ... Simulator.obj
 	@echo ... Simulator.i
 	@echo ... Simulator.s

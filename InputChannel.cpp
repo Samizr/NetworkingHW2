@@ -5,6 +5,7 @@
 #include <cassert>
 #include "InputChannel.h"
 #include <ctime>
+#include <random>
 #include <cstdlib>
 
 static double randomizeFraction();
@@ -26,6 +27,13 @@ int InputChannel::processPackage(const Package &package) {
 
 InputChannel::InputChannel(const vector<double> &probabilities, double lambda) : probabilities(probabilities),
                                                                                  lambda(lambda) {}
+double InputChannel::getDistributionVariable() {
+    return lambda;
+}
+
+InputChannel::InputChannel() : lambda(-1){
+
+}
 
 
 //STATIC FUNCTIONS:

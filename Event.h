@@ -11,14 +11,16 @@
 class Event {
 private:
     bool inEvent;
-    int time;
+    double time;
     WaitQueue *outQueue;
     InputChannel *inQueue;
 
 public:
-    Event(bool inEvent, int time, WaitQueue *outQueue, InputChannel *inQueue);
+    //Event(bool inEvent, double time, WaitQueue *outQueue, InputChannel *inQueue);
+    Event(bool inEvent, double currentTime, WaitQueue *outQueue, InputChannel *inQueue);
+    Event();
     bool isInEvent();
-    int getTime() const;
+    double getTime() const;
     WaitQueue *getOutQueue() const;
     InputChannel *getInQueue() const;
 
@@ -29,6 +31,10 @@ public:
     bool operator<=(const Event &rhs) const;
 
     bool operator>=(const Event &rhs) const;
+
+    bool operator==(const Event &rhs) const;
+
+    bool operator!=(const Event &rhs) const;
 };
 
 

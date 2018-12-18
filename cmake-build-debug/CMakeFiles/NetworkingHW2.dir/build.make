@@ -69,9 +69,22 @@ CMakeFiles/NetworkingHW2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkingHW2.dir/main.cpp.s"
 	S:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\main.cpp" -o CMakeFiles\NetworkingHW2.dir\main.cpp.s
 
+CMakeFiles/NetworkingHW2.dir/Package.cpp.obj: CMakeFiles/NetworkingHW2.dir/flags.make
+CMakeFiles/NetworkingHW2.dir/Package.cpp.obj: ../Package.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NetworkingHW2.dir/Package.cpp.obj"
+	S:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkingHW2.dir\Package.cpp.obj -c "C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\Package.cpp"
+
+CMakeFiles/NetworkingHW2.dir/Package.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkingHW2.dir/Package.cpp.i"
+	S:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\Package.cpp" > CMakeFiles\NetworkingHW2.dir\Package.cpp.i
+
+CMakeFiles/NetworkingHW2.dir/Package.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkingHW2.dir/Package.cpp.s"
+	S:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\Package.cpp" -o CMakeFiles\NetworkingHW2.dir\Package.cpp.s
+
 CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj: CMakeFiles/NetworkingHW2.dir/flags.make
 CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj: ../WaitQueue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj"
 	S:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkingHW2.dir\WaitQueue.cpp.obj -c "C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\WaitQueue.cpp"
 
 CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.i: cmake_force
@@ -84,7 +97,7 @@ CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.s: cmake_force
 
 CMakeFiles/NetworkingHW2.dir/Event.cpp.obj: CMakeFiles/NetworkingHW2.dir/flags.make
 CMakeFiles/NetworkingHW2.dir/Event.cpp.obj: ../Event.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NetworkingHW2.dir/Event.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NetworkingHW2.dir/Event.cpp.obj"
 	S:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkingHW2.dir\Event.cpp.obj -c "C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\Event.cpp"
 
 CMakeFiles/NetworkingHW2.dir/Event.cpp.i: cmake_force
@@ -97,7 +110,7 @@ CMakeFiles/NetworkingHW2.dir/Event.cpp.s: cmake_force
 
 CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj: CMakeFiles/NetworkingHW2.dir/flags.make
 CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj: ../Simulator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj"
 	S:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkingHW2.dir\Simulator.cpp.obj -c "C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\Simulator.cpp"
 
 CMakeFiles/NetworkingHW2.dir/Simulator.cpp.i: cmake_force
@@ -110,7 +123,7 @@ CMakeFiles/NetworkingHW2.dir/Simulator.cpp.s: cmake_force
 
 CMakeFiles/NetworkingHW2.dir/InputChannel.cpp.obj: CMakeFiles/NetworkingHW2.dir/flags.make
 CMakeFiles/NetworkingHW2.dir/InputChannel.cpp.obj: ../InputChannel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NetworkingHW2.dir/InputChannel.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/NetworkingHW2.dir/InputChannel.cpp.obj"
 	S:\TDM-GCC-64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkingHW2.dir\InputChannel.cpp.obj -c "C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\InputChannel.cpp"
 
 CMakeFiles/NetworkingHW2.dir/InputChannel.cpp.i: cmake_force
@@ -124,6 +137,7 @@ CMakeFiles/NetworkingHW2.dir/InputChannel.cpp.s: cmake_force
 # Object files for target NetworkingHW2
 NetworkingHW2_OBJECTS = \
 "CMakeFiles/NetworkingHW2.dir/main.cpp.obj" \
+"CMakeFiles/NetworkingHW2.dir/Package.cpp.obj" \
 "CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj" \
 "CMakeFiles/NetworkingHW2.dir/Event.cpp.obj" \
 "CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj" \
@@ -133,6 +147,7 @@ NetworkingHW2_OBJECTS = \
 NetworkingHW2_EXTERNAL_OBJECTS =
 
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/main.cpp.obj
+NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/Package.cpp.obj
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/Event.cpp.obj
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj
@@ -141,7 +156,7 @@ NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/build.make
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/linklibs.rsp
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/objects1.rsp
 NetworkingHW2.exe: CMakeFiles/NetworkingHW2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable NetworkingHW2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable NetworkingHW2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\NetworkingHW2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -73,6 +73,14 @@ public:
     void insert(const T &element);
 
     /*
+     * Checks if heap is empty.
+     *
+     * Complexity:
+     *      O(1)
+     */
+    bool isEmpty();
+
+    /*
     * Decreases the element in a given index.
     * Parameters:
     *      ~index: the index in of the element to change
@@ -283,7 +291,10 @@ bool MinHeap<T>::isInHeap(const T &element) {
     return false;
 }
 
-
+template<class T>
+bool MinHeap<T>::isEmpty() {
+    return !array.isUsed(1);
+}
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  STATIC FUNCTIONS IMPLEMENTATIONS:  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

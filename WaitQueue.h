@@ -7,7 +7,7 @@
 #define NETWORKINGHW2_WAITQUEUE_H
 
 #include "Package.h"
-#include "Event.h"
+//#include "Event.h"
 #include <vector>
 
 using std::vector;
@@ -21,9 +21,23 @@ private:
     double mu;
 
 public:
+    WaitQueue();
+
     WaitQueue(int maxSize, double mu);
-    bool receivePackage(const Package& package);
-    Event generateOutEvent(int currentTime);
+
+    bool receivePackage(const Package &package);
+
+    double popPackage(double popTime);
+
+    void incOverallReceived();
+
+    int getMaxSize() const;
+
+    const vector<Package> &getPackages() const;
+
+    void incOverallAccepted();
+
+    double getDistributionVariable();
 };
 
 
