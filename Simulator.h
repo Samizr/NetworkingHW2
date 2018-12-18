@@ -16,14 +16,17 @@ using std::vector;
 
 class Simulator {
 private:
-    int N, M, T;
+    int T, N, M;
     vector<WaitQueue> outputQueues;
     vector<InputChannel> inputQueues;
     MinHeap<Event> events;
 public:
-    Simulator(int N, int M, int T, vector<vector<double>> allProbabilities);
+    Simulator(int T, int N, int M, vector<int> outQueueSizes, vector<vector<double>> allProbabilities);
     void run();
+
 };
 
 
 #endif //NETWORKINGHW2_SIMULATOR_H
+
+

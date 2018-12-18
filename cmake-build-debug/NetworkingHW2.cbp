@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/DynamicArray.h">
+			<Option target="NetworkingHW2"/>
+		</Unit>
 		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/Event.cpp">
 			<Option target="NetworkingHW2"/>
 		</Unit>
@@ -95,12 +98,6 @@
 			<Option target="NetworkingHW2"/>
 		</Unit>
 		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/MinHeap.h">
-			<Option target="NetworkingHW2"/>
-		</Unit>
-		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/Package.cpp">
-			<Option target="NetworkingHW2"/>
-		</Unit>
-		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/Package.h">
 			<Option target="NetworkingHW2"/>
 		</Unit>
 		<Unit filename="C:/Users/Sami/Documents/GitHub/NetworkingHW2/Simulator.cpp">
