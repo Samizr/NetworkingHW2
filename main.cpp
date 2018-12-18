@@ -9,8 +9,6 @@ using std::endl;
 using std::vector;
 using std::string;
 
-//static double stringToNumber(char *string);
-
 static vector<vector<double>> parseProbabilities(char *argv[], int *argID, int N, int M);
 
 static vector<double> parseNumbersD(char *argv[], int *argID, int size);
@@ -43,6 +41,11 @@ int main(int argc, char *argv[]) {
     Simulator simulation(T, N, M, probabilities, lambdas, queueSizes, mus);
 
     simulation.run();
+
+    simulation.printResults();
+
+
+
     return 0;
 }
 

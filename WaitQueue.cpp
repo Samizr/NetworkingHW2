@@ -24,14 +24,6 @@ double WaitQueue::popPackage(double popTime) {
     return popTime - arrival;
 }
 
-void WaitQueue::incOverallReceived() {
-    overallReceived++;
-}
-
-void WaitQueue::incOverallAccepted() {
-    overallAccepted++;
-}
-
 const vector<Package> &WaitQueue::getPackages() const {
     return packages;
 }
@@ -46,6 +38,22 @@ double WaitQueue::getDistributionVariable() {
 
 WaitQueue::WaitQueue() : overallAccepted(-1), overallReceived(-1), maxSize(-1), mu(-1){
 
+}
+
+int WaitQueue::getOverallReceived() const {
+    return overallReceived;
+}
+
+void WaitQueue::setOverallReceived(int overallReceived) {
+    WaitQueue::overallReceived = overallReceived;
+}
+
+int WaitQueue::getOverallAccepted() const {
+    return overallAccepted;
+}
+
+void WaitQueue::setOverallAccepted(int overallAccepted) {
+    WaitQueue::overallAccepted = overallAccepted;
 }
 
 

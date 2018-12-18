@@ -14,10 +14,8 @@ CMakeFiles/NetworkingHW2.dir/InputChannel.cpp.obj: ../Package.h
 CMakeFiles/NetworkingHW2.dir/Package.cpp.obj: ../Package.cpp
 CMakeFiles/NetworkingHW2.dir/Package.cpp.obj: ../Package.h
 
-CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj: ../DynamicArray.h
 CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj: ../Event.h
 CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj: ../InputChannel.h
-CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj: ../MinHeap.h
 CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj: ../Package.h
 CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj: ../Simulator.cpp
 CMakeFiles/NetworkingHW2.dir/Simulator.cpp.obj: ../Simulator.h
@@ -27,10 +25,8 @@ CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj: ../Package.h
 CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj: ../WaitQueue.cpp
 CMakeFiles/NetworkingHW2.dir/WaitQueue.cpp.obj: ../WaitQueue.h
 
-CMakeFiles/NetworkingHW2.dir/main.cpp.obj: ../DynamicArray.h
 CMakeFiles/NetworkingHW2.dir/main.cpp.obj: ../Event.h
 CMakeFiles/NetworkingHW2.dir/main.cpp.obj: ../InputChannel.h
-CMakeFiles/NetworkingHW2.dir/main.cpp.obj: ../MinHeap.h
 CMakeFiles/NetworkingHW2.dir/main.cpp.obj: ../Package.h
 CMakeFiles/NetworkingHW2.dir/main.cpp.obj: ../Simulator.h
 CMakeFiles/NetworkingHW2.dir/main.cpp.obj: ../WaitQueue.h

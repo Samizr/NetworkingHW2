@@ -29,13 +29,17 @@ public:
 
     double popPackage(double popTime);
 
-    void incOverallReceived();
-
     int getMaxSize() const;
 
-    const vector<Package> &getPackages() const;
+    int getOverallReceived() const;
 
-    void incOverallAccepted();
+    void setOverallReceived(int overallReceived);
+
+    int getOverallAccepted() const;
+
+    void setOverallAccepted(int overallAccepted);
+
+    const vector<Package> &getPackages() const;
 
     double getDistributionVariable();
 };

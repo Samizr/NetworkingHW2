@@ -3,19 +3,19 @@
 //
 
 #include "Simulator.h"
+#include <iostream>
+#include <cassert>
 
-//using std::pop_heap;
-//using std::push_heap;
+static long int calculateReceived();
 
 void Simulator::run() {
-//    while (!events.isEmpty()) {
     while (!eventsHeap.empty()) {
         //Extract min event:
-//        Event event = events.findMin();
         std::pop_heap(eventsHeap.begin(), eventsHeap.end());
         Event event = eventsHeap.back();
         eventsHeap.pop_back();
         double time = event.getTime();
+        currentT = time;
 
         //Extract min event out or in queue:
         if (event.isInEvent()) {
@@ -50,12 +50,10 @@ Simulator::Simulator(double T, int N, int M, vector<vector<double>> probabilitie
     //INITIATES QUEUES AND FILLS UP N+M NEW EVENTS.
     for (int i = 0; i < N; i++) {
         inputQueues[i] = InputChannel(probabilities[i], lambdas[i]);
-//        events.insert(Event(true, 0, nullptr, &inputQueues[i]));
         eventsHeap.push_back(Event(true, 0, nullptr, &inputQueues[i]));
     }
     for (int j = 0; j < M; j++) {
         outputQueues[j] = WaitQueue(queueSizes[j], mus[j]);
-//        events.insert(Event(false, 0, &outputQueues[j], nullptr));
         eventsHeap.push_back(Event(false, 0, &outputQueues[j], nullptr));
     }
     std::make_heap(eventsHeap.begin(), eventsHeap.end());
@@ -63,3 +61,38 @@ Simulator::Simulator(double T, int N, int M, vector<vector<double>> probabilitie
     //TODO: If performance withstands, okay, if not choose above option.
     //TODO: Note that according to this you should implement: if queue has no input, there should be no out events.
 }
+
+void Simulator::printResults() {
+    using std::cout;
+    long int numReceived = calculateReceived();
+    long int numAccepted = calculateAccepted();
+    cout << numAccepted << " ";
+    for (auto &outQ : outputQueues) {
+        cout << outQ.getOverallAccepted() << " ";
+    }
+    cout << numReceived << " ";
+    for (auto &outQ : outputQueues) {
+        cout << outQ.getOverallReceived() << " ";
+    }
+    cout << currentT << " ";
+
+
+}
+
+long int Simulator::calculateAccepted() {
+    long int sum = 0;
+    for (auto &outQ : outputQueues) {
+        sum += outQ.getOverallAccepted();
+    }
+    return sum;
+}
+
+long int Simulator::calculateReceived() {
+    long int sum = 0;
+    for (auto &outQ : outputQueues) {
+        sum += outQ.getOverallReceived();
+    }
+    return sum;
+}
+
+

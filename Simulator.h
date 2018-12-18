@@ -22,11 +22,16 @@ private:
     vector<Event> eventsHeap;
     double totalWaitTime;
 
+    long int calculateAccepted();
+    long int calculateReceived();
+
 public:
     Simulator(double T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas, vector<int> queueSizes,
               vector<double> mus);
 
     void run();
+
+    void printResults();
 
 };
 

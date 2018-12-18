@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/DynamicArray.h
-cstdlib
--
-cassert
--
-iostream
--
-
 C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/Event.h
 WaitQueue.h
 C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/WaitQueue.h
@@ -26,15 +18,7 @@ vector
 Package.h
 C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/Package.h
 
-C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/MinHeap.h
-DynamicArray.h
-C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/DynamicArray.h
-
 C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/Package.h
-
-C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/Simulator.cpp
-Simulator.h
-C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/Simulator.h
 
 C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/Simulator.h
 vector
@@ -47,12 +31,20 @@ algorithm
 -
 Event.h
 C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/Event.h
-MinHeap.h
-C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/MinHeap.h
 
 C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/WaitQueue.h
 Package.h
 C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/Package.h
 vector
 -
+
+C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/main.cpp
+iostream
+-
+vector
+-
+string
+-
+Simulator.h
+C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/Simulator.h
 
