@@ -10,20 +10,20 @@
 #include "InputChannel.h"
 #include <algorithm>
 #include "Event.h"
-#include "MinHeap.h"
 
 using std::vector;
 
 class Simulator {
 private:
-    int T, N, M;
+    double T, currentT;
+    int N, M;
     vector<InputChannel> inputQueues;
     vector<WaitQueue> outputQueues;
-    MinHeap<Event> events;
+    vector<Event> eventsHeap;
     double totalWaitTime;
 
 public:
-    Simulator(int T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas, vector<int> queueSizes,
+    Simulator(double T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas, vector<int> queueSizes,
               vector<double> mus);
 
     void run();

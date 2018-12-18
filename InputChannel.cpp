@@ -16,7 +16,7 @@ int InputChannel::processPackage(const Package &package) {
     int counter = 0;
     for (double num : probabilities) {
         sum += num;
-        if (randomNumber < sum) {
+        if (randomNumber <= sum) {
             return counter;
         } else {
             counter++;
@@ -27,22 +27,28 @@ int InputChannel::processPackage(const Package &package) {
 
 InputChannel::InputChannel(const vector<double> &probabilities, double lambda) : probabilities(probabilities),
                                                                                  lambda(lambda) {}
+
 double InputChannel::getDistributionVariable() {
     return lambda;
 }
 
-InputChannel::InputChannel() : lambda(-1){
+InputChannel::InputChannel() : lambda(-1) {
 
 }
 
 
 //STATIC FUNCTIONS:
 static double randomizeFraction() {
-    srand(time(NULL));
-    int nums[7];
-    double randNum = 0;
-    for (int i = 0; i < 7; i++) {
-        randNum += rand() % 10;
-        randNum *= 10;
-    }
+    std::random_device generator;
+    std::uniform_real_distribution<double> distribution(0.0, 1.0);
+    return distribution(generator);
 }
+
+//PREVIOUS GENERATOR:
+//    srand(time(NULL));
+//    int nums[7];
+//    double randNum = 0;
+//    for (int i = 0; i < 7; i++) {
+//        randNum += rand() % 10;
+//        randNum *= 10;
+//    }

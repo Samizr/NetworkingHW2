@@ -9,20 +9,23 @@ bool Event::isInEvent() {
     return inEvent;
 }
 
-Event::Event() : inEvent(true), time(-1), outQueue(nullptr), inQueue(nullptr){
+Event::Event() : inEvent(true), time(-1), outQueue(nullptr), inQueue(nullptr) {
 }
 
 Event::Event(bool inEvent, double currentTime, WaitQueue *outQueue, InputChannel *inQueue)
         : inEvent(inEvent), outQueue(outQueue), inQueue(inQueue) {
-    std::default_random_engine generator;
-    std::exponential_distribution<double> distribution;
-
+    std::random_device generator;
+    double addition;
     if (inEvent) {
-        distribution = std::exponential_distribution<double>(inQueue->getDistributionVariable());
+        std::exponential_distribution<double> distribution(inQueue->getDistributionVariable());
+        this->outQueue = nullptr;
+        addition = distribution(generator);
     } else {
-        distribution = std::exponential_distribution<double>(outQueue->getDistributionVariable());
+        std::exponential_distribution<double> distribution(outQueue->getDistributionVariable());
+        this->inQueue = nullptr;
+        addition = distribution(generator);
     }
-    time = currentTime + distribution(generator);
+    time = currentTime + addition;
 }
 
 double Event::getTime() const {
@@ -37,8 +40,9 @@ InputChannel *Event::getInQueue() const {
     return inQueue;
 }
 
+//CHANGED FROM < to > TO TRANSFORM MAX_HEAP TO MIN_HEAP
 bool Event::operator<(const Event &rhs) const {
-    return time < rhs.time;
+    return time > rhs.time;
 }
 
 bool Event::operator>(const Event &rhs) const {

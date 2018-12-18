@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     int argID = 1;
 
     //FILL T, N, M:
-    int T = std::stoi(argv[argID++]);
+    double T = std::stod(argv[argID++]);
     int N = std::stoi(argv[argID++]);
     int M = std::stoi(argv[argID++]);
 
@@ -42,8 +42,8 @@ int main(int argc, char *argv[]) {
 
     Simulator simulation(T, N, M, probabilities, lambdas, queueSizes, mus);
 
-
-return 0;
+    simulation.run();
+    return 0;
 }
 
 
@@ -102,3 +102,23 @@ vector<int> parseNumbersI(char *argv[], int *argID, int size) {
 //}
 //cout << endl;
 //return 0;
+
+//    long double sum = 0;
+//    int times = 2000000;
+//    cout << generator.entropy();
+//    cout << distribution(generator) << endl;
+//    cout << distribution(generator) << endl;
+//    cout << distribution(generator) << endl;
+//    cout << distribution(generator) << endl;
+//    cout << distribution(generator) << endl;
+//    cout << distribution(generator) << endl;
+//    cout << distribution(generator) << endl;
+//    for (int i = 0; i < times; i++) {
+//        sum += distribution(generator);
+//    }
+//
+//    cout << sum / times << endl << endl;
+//    cout << simulation.events.findMin().getTime() << endl;
+//    simulation.events.delMin();
+//    cout << simulation.events.findMin().getTime() << endl;
+//    simulation.events.delMin();
