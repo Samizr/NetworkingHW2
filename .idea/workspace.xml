@@ -11,17 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0815384-0516-47ab-a5e4-b0bbd5ec7c52" name="Default" comment="Fixed small stuff">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Event.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Event.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Event.h" beforeDir="false" afterPath="$PROJECT_DIR$/Event.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InputChannel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/InputChannel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InputChannel.h" beforeDir="false" afterPath="$PROJECT_DIR$/InputChannel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Simulator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simulator.h" beforeDir="false" afterPath="$PROJECT_DIR$/Simulator.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WaitQueue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/WaitQueue.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WaitQueue.h" beforeDir="false" afterPath="$PROJECT_DIR$/WaitQueue.h" afterDir="false" />
-    </list>
+    <list default="true" id="c0815384-0516-47ab-a5e4-b0bbd5ec7c52" name="Default" comment="Fixed small stuff" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -326,7 +316,7 @@
       <workItem from="1544726144490" duration="913000" />
       <workItem from="1545059960214" duration="3508000" />
       <workItem from="1545069807224" duration="4885000" />
-      <workItem from="1545132340579" duration="12311000" />
+      <workItem from="1545132340579" duration="12876000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed small stuff">
       <created>1544727039675</created>
@@ -339,7 +329,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26526000" />
+    <option name="totallyTimeSpent" value="27091000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
