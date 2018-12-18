@@ -14,3 +14,11 @@ Package::Package(int time) {
     leaveTime = -1;
     active = true;
 }
+
+double Package::getArrivalTime() const {
+    return arrivalTime;
+}
+
+void Package::setLeaveTime(double leaveTime) {
+    Package::leaveTime = leaveTime;
+}

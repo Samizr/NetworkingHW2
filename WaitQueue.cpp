@@ -20,4 +20,28 @@ Event WaitQueue::generateOutEvent(int currentTime) {
     //return Event(false, 0, nullptr, nullptr);
 }
 
+double WaitQueue::popPackage(double popTime) {
+    Package current = *packages.begin();
+    double arrival = current.getArrivalTime();
+    current.setLeaveTime(popTime);
+    packages.erase(packages.begin());
+    return popTime-arrival;
+}
+
+void WaitQueue::incOverallReceived() {
+    overallReceived++;
+}
+
+void WaitQueue::incOverallAccepted() {
+    overallAccepted++;
+}
+
+const vector<Package> &WaitQueue::getPackages() const {
+    return packages;
+}
+
+int WaitQueue::getMaxSize() const {
+    return maxSize;
+}
+
 

@@ -8,13 +8,17 @@
 
 class Package {
 private:
-    int arrivalTime;
-    int leaveTime;
+    double arrivalTime;
+    double leaveTime;
     bool active;
 
 public:
     explicit Package(int time);
     void commitPackage(int time);
+
+    double getArrivalTime() const;
+
+    void setLeaveTime(double leaveTime);
 };
 
 

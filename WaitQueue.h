@@ -23,7 +23,16 @@ private:
 public:
     WaitQueue(int maxSize, double mu);
     bool receivePackage(const Package& package);
+    double popPackage(double popTime);
     Event generateOutEvent(int currentTime);
+
+    void incOverallReceived();
+
+    int getMaxSize() const;
+
+    const vector<Package> &getPackages() const;
+
+    void incOverallAccepted();
 };
 
 

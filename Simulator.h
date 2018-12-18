@@ -20,6 +20,8 @@ private:
     vector<InputChannel> inputQueues;
     vector<WaitQueue> outputQueues;
     MinHeap<Event> events;
+    double totalWaitTime;
+
 public:
     Simulator(int T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas, vector<int> queueSizes,
               vector<double> mus);
