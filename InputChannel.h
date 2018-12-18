@@ -14,11 +14,12 @@ using std::vector;
 class InputChannel {
 private:
     vector<double> probabilities;
-
+    double lambda;
 public :
-    explicit InputChannel(const vector<double>& probabilities);
+
+    explicit InputChannel(const vector<double>& probabilities, double lambda);
     int processPackage(const Package& package);
-    //TODO: Event generateInEvent(int currentTime);
+    Event generateInEvent(int currentTime);
 
 };
 

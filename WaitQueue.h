@@ -18,9 +18,10 @@ private:
     int overallAccepted;
     vector<Package> packages;
     int maxSize;
+    double mu;
 
 public:
-    WaitQueue(int maxSize);
+    WaitQueue(int maxSize, double mu);
     bool receivePackage(const Package& package);
     Event generateOutEvent(int currentTime);
 };

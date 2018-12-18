@@ -4,7 +4,7 @@
 
 #include "WaitQueue.h"
 
-WaitQueue::WaitQueue(int maxSize) : overallAccepted(0), overallReceived(0), maxSize(maxSize) {}
+WaitQueue::WaitQueue(int maxSize, double mu) : overallAccepted(0), overallReceived(0), maxSize(maxSize), mu(mu) {}
 
 bool WaitQueue::receivePackage(const Package& package){
     overallReceived++;
@@ -19,4 +19,5 @@ Event WaitQueue::generateOutEvent(int currentTime) {
     //TODO
     //return Event(false, 0, nullptr, nullptr);
 }
+
 

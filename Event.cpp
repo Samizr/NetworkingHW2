@@ -23,3 +23,19 @@ WaitQueue *Event::getOutQueue() const {
 InputChannel *Event::getInQueue() const {
     return inQueue;
 }
+
+bool Event::operator<(const Event &rhs) const {
+    return time < rhs.time;
+}
+
+bool Event::operator>(const Event &rhs) const {
+    return rhs < *this;
+}
+
+bool Event::operator<=(const Event &rhs) const {
+    return !(rhs < *this);
+}
+
+bool Event::operator>=(const Event &rhs) const {
+    return !(*this < rhs);
+}

@@ -17,8 +17,8 @@ using std::vector;
 class Simulator {
 private:
     int T, N, M;
-    vector<WaitQueue> outputQueues;
     vector<InputChannel> inputQueues;
+    vector<WaitQueue> outputQueues;
     MinHeap<Event> events;
 public:
     Simulator(int T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas, vector<int> queueSizes,

@@ -9,7 +9,7 @@
 
 static double randomizeFraction();
 
-int InputChannel::processPackage(const Package& package) {
+int InputChannel::processPackage(const Package &package) {
     double randomNumber = randomizeFraction();
     double sum = 0;
     int counter = 0;
@@ -24,7 +24,8 @@ int InputChannel::processPackage(const Package& package) {
     assert(false);
 }
 
-InputChannel::InputChannel(const vector<double>& probabilities) : probabilities(probabilities) { }
+InputChannel::InputChannel(const vector<double> &probabilities, double lambda) : probabilities(probabilities),
+                                                                                 lambda(lambda) {}
 
 
 //STATIC FUNCTIONS:

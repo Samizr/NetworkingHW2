@@ -21,6 +21,14 @@ public:
     int getTime() const;
     WaitQueue *getOutQueue() const;
     InputChannel *getInQueue() const;
+
+    bool operator<(const Event &rhs) const;
+
+    bool operator>(const Event &rhs) const;
+
+    bool operator<=(const Event &rhs) const;
+
+    bool operator>=(const Event &rhs) const;
 };
 
 

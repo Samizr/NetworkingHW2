@@ -18,6 +18,12 @@ void Simulator::run() {
 }
 
 Simulator::Simulator(int T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas,
-                     vector<int> queueSizes, vector<double> mus) : T(T), N(N), M(M) {
+                     vector<int> queueSizes, vector<double> mus) : T(T), N(N), M(M), inputQueues(N), outputQueues(M) {
+    for (int i = 0; i < N; i++) {
+        inputQueues[i] = InputChannel(probabilities[i], lambdas[i]);
+    }
+    for (int j = 0; j < M; j++) {
+        outputQueues[j] = WaitQueue(queueSizes[j], mus[j]);
+    }
 
 }
