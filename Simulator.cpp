@@ -17,6 +17,7 @@ void Simulator::run() {
 
 }
 
-Simulator::Simulator(int N, int M, int T, vector<vector<double>> allProbabilities) : N(N), M(M), T(T){
+Simulator::Simulator(int T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas,
+                     vector<int> queueSizes, vector<double> mus) : T(T), N(N), M(M) {
 
 }

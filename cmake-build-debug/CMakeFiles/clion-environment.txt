@@ -1,4 +1,4 @@
-ToolSet: w64 4.0@C:\TDM-GCC-64
+ToolSet: w64 4.0@S:\TDM-GCC-64
 Options: 
 
 Options:

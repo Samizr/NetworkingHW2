@@ -43,6 +43,13 @@ private:
 public:
     //CLASS PUBLIC FUNCTIONS:
     /*
+     * Constructs an empty min heap.
+     * Complexity:
+     *      O(1)
+     *      Array size is minimal array size.
+     */
+    MinHeap();
+    /*
      * Constructs a min heap from given elements
      * Parameters:
      *      ~data: the data array to make a heap from.
@@ -50,7 +57,7 @@ public:
      *
      * Complexity:
      *      O(n)
-     *      Using the semi-complete tree algortihm proven in class.
+     *      Using the semi-complete tree algorithm proven in class.
      */
     MinHeap(const T *data, int n);
 
@@ -145,6 +152,10 @@ static const T &min(const T &a, const T &b);
 //                                          **                         **                                             //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  PUBLIC FUNCTIONS IMPLEMENTATION:  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
+
+template<class T>
+MinHeap<T>::MinHeap() : array(3 * MINIMAL_SIZE, AUTO, FIRST_INDEX_IN_ARRAY){
+}
 
 template<class T>
 MinHeap<T>::MinHeap(const T *data, int n) : array(3 * n, AUTO, FIRST_INDEX_IN_ARRAY) {
@@ -271,6 +282,8 @@ bool MinHeap<T>::isInHeap(const T &element) {
     }
     return false;
 }
+
+
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  STATIC FUNCTIONS IMPLEMENTATIONS:  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

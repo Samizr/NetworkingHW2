@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Sami\Documents\GitHub\NetworkingHW2
+"S:\Program Files\JetBrains\CLion 2018.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Sami Zreik\Documents\GitHub\NetworkingHW2"
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Sami/Documents/GitHub/NetworkingHW2/cmake-build-debug
+-- Build files have been written to: C:/Users/Sami Zreik/Documents/GitHub/NetworkingHW2/cmake-build-debug

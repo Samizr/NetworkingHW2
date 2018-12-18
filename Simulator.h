@@ -21,7 +21,9 @@ private:
     vector<InputChannel> inputQueues;
     MinHeap<Event> events;
 public:
-    Simulator(int T, int N, int M, vector<int> outQueueSizes, vector<vector<double>> allProbabilities);
+    Simulator(int T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas, vector<int> queueSizes,
+              vector<double> mus);
+
     void run();
 
 };
