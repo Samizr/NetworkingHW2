@@ -15,7 +15,6 @@ void Simulator::run() {
         Event event = eventsHeap.back();
         eventsHeap.pop_back();
         double time = event.getTime();
-        currentT = time;
 
         //Extract min event out or in queue:
         if (event.isInEvent()) {
@@ -23,21 +22,14 @@ void Simulator::run() {
             if (time > T) {
                 continue;
             }
-            //DEBUG BEGIN:
-            overAll++;
-            overAllInput++;
-            //DEBUG END!
             assert(event.getOutQueue() == nullptr);
             Package newPackage(time);
             InputChannel *inQueue = event.getInQueue();
             int outChannelNumber = inQueue->processPackage(newPackage, generator);
             outputQueues[outChannelNumber].receivePackage(newPackage, time);
-        } else if (!event.getOutQueue()->getPackages().empty()){
+            currentT = time;
+        } else if (!event.getOutQueue()->getPackages().empty()) {
             //If output event --> packages.popPackage, package.commit, generate new output event
-            //DEBUG BEGIN:
-            overAll++;
-            overAllOutput++;
-            //DEBUG END!
             assert(event.getInQueue() == nullptr);
             WaitQueue *outQueue = event.getOutQueue();
             Package outPackage = outQueue->popPackage(time);
@@ -45,6 +37,7 @@ void Simulator::run() {
             totalServiceTime += outPackage.getServiceTime();
             totalWaitTime += outPackage.getWaitingTime();
             outQueue->getPackages().begin()->setTreatmentBegin(time);
+            currentT = time;
         }
         if (time < T || (!event.isInEvent() && !event.getOutQueue()->getPackages().empty())) {
             Event newEvent(event.isInEvent(), time, event.getOutQueue(), event.getInQueue(), generator);
@@ -56,7 +49,7 @@ void Simulator::run() {
 
 Simulator::Simulator(double T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas,
                      vector<int> queueSizes, vector<double> mus) : T(T), currentT(0), N(N), M(M), inputQueues(N),
-                                                                   outputQueues(M), totalWaitTime(0), generator(rd()) {
+                                                                   outputQueues(M), totalWaitTime(0), generator() {
     //INITIATES QUEUES AND FILLS UP N+M NEW EVENTS.
     for (int i = 0; i < N; i++) {
         inputQueues[i] = (InputChannel(probabilities[i], lambdas[i]));
@@ -82,10 +75,10 @@ void Simulator::printResults() {
     long int numReceived = calculateReceived();
     long int numAccepted = calculateAccepted();
     //PRINT Y:
-    cout << numReceived << " ";
+    cout << numAccepted << " ";
     //PRINT Yi:
     for (auto &outQ : outputQueues) {
-        cout << outQ.getOverallReceived() << " ";
+        cout << outQ.getOverallAccepted() << " ";
     }
     //PRINT X:
     cout << numReceived - numAccepted << " ";
@@ -97,10 +90,10 @@ void Simulator::printResults() {
     cout << currentT << " ";
 
     //PRINT AVG WAIT TIME:
-    cout << (totalWaitTime-totalServiceTime)/(double)numAccepted << " ";
+    cout << (totalWaitTime - totalServiceTime) / (double) numAccepted << " ";
 
     //PRINT AVG SERVICE TIME:
-    cout << totalServiceTime/(double)numAccepted << endl;
+    cout << totalServiceTime / (double) numAccepted << endl;
 
 }
 
