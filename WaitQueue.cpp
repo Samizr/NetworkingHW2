@@ -4,6 +4,7 @@
 
 #include "WaitQueue.h"
 #include <random>
+#include <cassert>
 
 WaitQueue::WaitQueue(int maxSize, double mu) : overallAccepted(0), overallReceived(0), maxSize(maxSize), mu(mu) {}
 
@@ -16,15 +17,15 @@ bool WaitQueue::receivePackage(const Package &package) {
     packages.push_back(package);
 }
 
-double WaitQueue::popPackage(double popTime) {
-    Package &current = packages.front();
-    double arrival = current.getArrivalTime();
+Package WaitQueue::popPackage(double popTime) {
+    Package current = packages.front();
     current.commitPackage(popTime);
     packages.erase(packages.begin());
-    return popTime - arrival;
+    assert(current.getServiceTime() > 0);
+    return current;
 }
 
-const vector<Package> &WaitQueue::getPackages() const {
+vector<Package> &WaitQueue::getPackages() {
     return packages;
 }
 

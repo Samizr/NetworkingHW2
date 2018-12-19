@@ -27,7 +27,7 @@ public:
 
     bool receivePackage(const Package &package);
 
-    double popPackage(double popTime);
+    Package popPackage(double popTime);
 
     int getMaxSize() const;
 
@@ -39,7 +39,7 @@ public:
 
     void setOverallAccepted(int overallAccepted);
 
-    const vector<Package> &getPackages() const;
+    vector<Package> &getPackages();
 
     double getDistributionVariable();
 };

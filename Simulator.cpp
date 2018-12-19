@@ -17,6 +17,9 @@ void Simulator::run() {
         double time = event.getTime();
         currentT = time;
 
+
+        if (currentT == 1000)
+            int x = 0;
         //Extract min event out or in queue:
         if (event.isInEvent()) {
             //If input event  --> new Package, processPackage, recievePackage, generate new input event
@@ -26,7 +29,7 @@ void Simulator::run() {
             assert(event.getOutQueue() == nullptr);
             Package newPackage(time);
             InputChannel *inQueue = event.getInQueue();
-            int outChannelNumber = inQueue->processPackage(newPackage);
+            int outChannelNumber = inQueue->processPackage(newPackage, generator);
             outputQueues[outChannelNumber].receivePackage(newPackage);
         } else {
             //If output event --> packages.popPackage, package.commit, generate new output event
@@ -34,7 +37,11 @@ void Simulator::run() {
             WaitQueue *outQueue = event.getOutQueue();
             if (outQueue->getPackages().empty())
                 continue;
-            outQueue->popPackage(time); //todo: use func output
+            Package outPackage = outQueue->popPackage(time);
+            totalServiceTime += outPackage.getWaitingTime();
+            totalWaitTime += outPackage.getServiceTime();
+            outQueue->getPackages().begin()->setTreatmentBegin(time);
+            //TODO: first top, or first top after free queue, will fail?
         }
         if (time < T) {
             Event newEvent(event.isInEvent(), time, event.getOutQueue(), event.getInQueue());
@@ -46,15 +53,15 @@ void Simulator::run() {
 
 Simulator::Simulator(double T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas,
                      vector<int> queueSizes, vector<double> mus) : T(T), currentT(0), N(N), M(M), inputQueues(N),
-                                                                   outputQueues(M), totalWaitTime(0) {
+                                                                   outputQueues(M), totalWaitTime(0), generator(rd()) {
     //INITIATES QUEUES AND FILLS UP N+M NEW EVENTS.
     for (int i = 0; i < N; i++) {
-        inputQueues[i] = InputChannel(probabilities[i], lambdas[i]);
-        eventsHeap.push_back(Event(true, 0, nullptr, &inputQueues[i]));
+        inputQueues[i] = (InputChannel(probabilities[i], lambdas[i]));
+        eventsHeap.emplace_back(Event(true, 0, nullptr, &inputQueues[i]));
     }
     for (int j = 0; j < M; j++) {
-        outputQueues[j] = WaitQueue(queueSizes[j], mus[j]);
-        eventsHeap.push_back(Event(false, 0, &outputQueues[j], nullptr));
+        outputQueues[j] = (WaitQueue(queueSizes[j], mus[j]));
+        eventsHeap.emplace_back(Event(false, 0, &outputQueues[j], nullptr));
     }
     std::make_heap(eventsHeap.begin(), eventsHeap.end());
     //TODO: Shouldn't we start inserting out events as soon as something is inserted?
@@ -64,17 +71,29 @@ Simulator::Simulator(double T, int N, int M, vector<vector<double>> probabilitie
 
 void Simulator::printResults() {
     using std::cout;
+    using std::endl;
     long int numReceived = calculateReceived();
     long int numAccepted = calculateAccepted();
-    cout << numAccepted << " ";
-    for (auto &outQ : outputQueues) {
-        cout << outQ.getOverallAccepted() << " ";
-    }
+    //PRINT Y:
     cout << numReceived << " ";
+    //PRINT Yi:
     for (auto &outQ : outputQueues) {
         cout << outQ.getOverallReceived() << " ";
     }
+    //PRINT X:
+    cout << numReceived - numAccepted << " ";
+    //PRINT Xi:
+    for (auto &outQ : outputQueues) {
+        cout << outQ.getOverallReceived() - outQ.getOverallAccepted() << " ";
+    }
+    //PRINT T'
     cout << currentT << " ";
+
+    //PRINT AVG WAIT TIME:
+    cout << totalWaitTime/(double)numAccepted << " ";
+
+    //PRINT AVG SERVICE TIME:
+    cout << totalServiceTime/(double)numAccepted << endl;
 
 
 }

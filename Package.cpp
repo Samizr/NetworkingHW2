@@ -9,14 +9,18 @@ void Package::commitPackage(double time) {
     active = false;
 }
 
-Package::Package(double time) : arrivalTime(time), leaveTime(-1), active(true) {
+Package::Package(double time) : arrivalTime(time), treatmentBegin(-1), leaveTime(-1), active(true) {
 
 }
 
-double Package::getArrivalTime() const {
-    return arrivalTime;
+double Package::getWaitingTime() const {
+    return leaveTime - arrivalTime;
 }
 
-//void Package::setLeaveTime(double leaveTime) {
-//    Package::leaveTime = leaveTime;
-//}
+double Package::getServiceTime() const {
+    return leaveTime - treatmentBegin;
+}
+
+void Package::setTreatmentBegin(double treatmentTime) {
+    treatmentBegin = treatmentTime;
+}

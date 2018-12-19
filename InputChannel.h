@@ -7,6 +7,7 @@
 
 #include <vector>
 #include "Package.h"
+#include <random>
 //#include "Event.h"
 
 using std::vector;
@@ -20,7 +21,7 @@ public :
 
     explicit InputChannel(const vector<double> &probabilities, double lambda);
 
-    int processPackage(const Package &package);
+    int processPackage(const Package &package, std::default_random_engine& generator);
 
     double getDistributionVariable();
 

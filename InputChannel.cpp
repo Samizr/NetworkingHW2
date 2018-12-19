@@ -8,10 +8,11 @@
 #include <random>
 #include <cstdlib>
 
-static double randomizeFraction();
+//static double randomizeFraction();
 
-int InputChannel::processPackage(const Package &package) {
-    double randomNumber = randomizeFraction();
+int InputChannel::processPackage(const Package &package, std::default_random_engine& generator) {
+    std::uniform_real_distribution<double> distribution(0.0, 1.0);
+    double randomNumber = distribution(generator);
     double sum = 0;
     int counter = 0;
     for (double num : probabilities) {
@@ -26,23 +27,22 @@ int InputChannel::processPackage(const Package &package) {
 }
 
 InputChannel::InputChannel(const vector<double> &probabilities, double lambda) : probabilities(probabilities),
-                                                                                 lambda(lambda) {}
+                                                                                 lambda(lambda){
+}
 
 double InputChannel::getDistributionVariable() {
     return lambda;
 }
 
-InputChannel::InputChannel() : lambda(-1) {
+InputChannel::InputChannel() : lambda(-1){
 
 }
 
 
 //STATIC FUNCTIONS:
-static double randomizeFraction() {
-    std::random_device generator;
-    std::uniform_real_distribution<double> distribution(0.0, 1.0);
-    return distribution(generator);
-}
+//static double randomizeFraction() {
+//    return distribution(generator);
+//}
 
 //PREVIOUS GENERATOR:
 //    srand(time(NULL));

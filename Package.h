@@ -10,15 +10,18 @@ class Package {
 private:
     double arrivalTime;
     double leaveTime;
+    double treatmentBegin;
     bool active;
 
 public:
     explicit Package(double time);
     void commitPackage(double time);
 
-    double getArrivalTime() const;
+    double getWaitingTime() const;
 
-//    void setLeaveTime(double leaveTime);
+    double getServiceTime() const;
+
+    void setTreatmentBegin(double treatmentTime);
 };
 
 

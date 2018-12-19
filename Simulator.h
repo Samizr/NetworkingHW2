@@ -21,7 +21,9 @@ private:
     vector<WaitQueue> outputQueues;
     vector<Event> eventsHeap;
     double totalWaitTime;
-
+    double totalServiceTime;
+    std::random_device rd;
+    std::default_random_engine generator;
     long int calculateAccepted();
     long int calculateReceived();
 
