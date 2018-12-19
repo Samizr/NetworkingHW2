@@ -13,12 +13,6 @@ void Simulator::run() {
         //Extract min event:
         std::pop_heap(eventsHeap.begin(), eventsHeap.end());
         Event event = eventsHeap.back();
-        //DEBUG BEGIN:
-//        for (auto event_i : eventsHeap) {
-//            if (event.getTime() > event_i.getTime())
-//                assert(false);
-//        }
-
         eventsHeap.pop_back();
         double time = event.getTime();
         currentT = time;
@@ -32,7 +26,6 @@ void Simulator::run() {
             //DEBUG BEGIN:
             overAll++;
             overAllInput++;
-//            std::cout << "Input Event number: " << overAllInput << ", out of overall: " << overAll << std::endl;
             //DEBUG END!
             assert(event.getOutQueue() == nullptr);
             Package newPackage(time);
@@ -44,7 +37,6 @@ void Simulator::run() {
             //DEBUG BEGIN:
             overAll++;
             overAllOutput++;
-//            std::cout << "Output Event number: " << overAllOutput << ", out of overall: " << overAll << std::endl;
             //DEBUG END!
             assert(event.getInQueue() == nullptr);
             WaitQueue *outQueue = event.getOutQueue();
@@ -53,10 +45,9 @@ void Simulator::run() {
             totalServiceTime += outPackage.getServiceTime();
             totalWaitTime += outPackage.getWaitingTime();
             outQueue->getPackages().begin()->setTreatmentBegin(time);
-            //TODO: first top, or first top after free queue, will fail?
         }
         if (time < T || (!event.isInEvent() && !event.getOutQueue()->getPackages().empty())) {
-            Event newEvent(event.isInEvent(), time, event.getOutQueue(), event.getInQueue());
+            Event newEvent(event.isInEvent(), time, event.getOutQueue(), event.getInQueue(), generator);
             eventsHeap.push_back(newEvent);
             std::push_heap(eventsHeap.begin(), eventsHeap.end());
         }
@@ -69,11 +60,11 @@ Simulator::Simulator(double T, int N, int M, vector<vector<double>> probabilitie
     //INITIATES QUEUES AND FILLS UP N+M NEW EVENTS.
     for (int i = 0; i < N; i++) {
         inputQueues[i] = (InputChannel(probabilities[i], lambdas[i]));
-        eventsHeap.emplace_back(Event(true, 0, nullptr, &inputQueues[i]));
+        eventsHeap.emplace_back(Event(true, 0, nullptr, &inputQueues[i], generator));
     }
     for (int j = 0; j < M; j++) {
         outputQueues[j] = (WaitQueue(queueSizes[j], mus[j]));
-        eventsHeap.emplace_back(Event(false, 0, &outputQueues[j], nullptr));
+        eventsHeap.emplace_back(Event(false, 0, &outputQueues[j], nullptr, generator));
     }
     std::make_heap(eventsHeap.begin(), eventsHeap.end());
     //TODO: Shouldn't we start inserting out events as soon as something is inserted?
@@ -110,6 +101,8 @@ void Simulator::printResults() {
 
     //PRINT AVG SERVICE TIME:
     cout << totalServiceTime/(double)numAccepted << endl;
+
+    cout << "AVG Distr: " << ::overallAdditions / (double)overAllInput << endl;
 
 
 }
