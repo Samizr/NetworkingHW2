@@ -13,6 +13,12 @@ void Simulator::run() {
         //Extract min event:
         std::pop_heap(eventsHeap.begin(), eventsHeap.end());
         Event event = eventsHeap.back();
+        //DEBUG BEGIN:
+//        for (auto event_i : eventsHeap) {
+//            if (event.getTime() > event_i.getTime())
+//                assert(false);
+//        }
+
         eventsHeap.pop_back();
         double time = event.getTime();
         currentT = time;
