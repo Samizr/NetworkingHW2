@@ -97,7 +97,7 @@ void Simulator::printResults() {
     cout << currentT << " ";
 
     //PRINT AVG WAIT TIME:
-    cout << totalWaitTime/(double)numAccepted << " ";
+    cout << (totalWaitTime-totalServiceTime)/(double)numAccepted << " ";
 
     //PRINT AVG SERVICE TIME:
     cout << totalServiceTime/(double)numAccepted << endl;
