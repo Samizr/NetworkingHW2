@@ -17,26 +17,33 @@ void Simulator::run() {
         double time = event.getTime();
         currentT = time;
 
-
-        if (currentT == 1000)
-            int x = 0;
+        if (overAllInput == 420)
+            int debug;
         //Extract min event out or in queue:
         if (event.isInEvent()) {
             //If input event  --> new Package, processPackage, recievePackage, generate new input event
             if (time > T) {
                 continue;
             }
+            //DEBUG BEGIN:
+            overAll++;
+            overAllInput++;
+//            std::cout << "Input Event number: " << overAllInput << ", out of overall: " << overAll << std::endl;
+            //DEBUG END!
             assert(event.getOutQueue() == nullptr);
             Package newPackage(time);
             InputChannel *inQueue = event.getInQueue();
             int outChannelNumber = inQueue->processPackage(newPackage, generator);
             outputQueues[outChannelNumber].receivePackage(newPackage);
-        } else {
+        } else if (!event.getOutQueue()->getPackages().empty()){
             //If output event --> packages.popPackage, package.commit, generate new output event
+            //DEBUG BEGIN:
+            overAll++;
+            overAllOutput++;
+//            std::cout << "Output Event number: " << overAllOutput << ", out of overall: " << overAll << std::endl;
+            //DEBUG END!
             assert(event.getInQueue() == nullptr);
             WaitQueue *outQueue = event.getOutQueue();
-            if (outQueue->getPackages().empty())
-                continue;
             Package outPackage = outQueue->popPackage(time);
             totalServiceTime += outPackage.getWaitingTime();
             totalWaitTime += outPackage.getServiceTime();
@@ -67,6 +74,10 @@ Simulator::Simulator(double T, int N, int M, vector<vector<double>> probabilitie
     //TODO: Shouldn't we start inserting out events as soon as something is inserted?
     //TODO: If performance withstands, okay, if not choose above option.
     //TODO: Note that according to this you should implement: if queue has no input, there should be no out events.
+    //DEBUG PARAMETERS:
+    overAll = 0;
+    overAllInput = 0;
+    overAllOutput = 0;
 }
 
 void Simulator::printResults() {
