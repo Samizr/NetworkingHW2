@@ -25,7 +25,7 @@ public:
 
     WaitQueue(int maxSize, double mu);
 
-    bool receivePackage(const Package &package);
+    bool receivePackage(const Package &package, double receiveTime);
 
     Package popPackage(double popTime);
 

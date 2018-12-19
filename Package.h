@@ -11,6 +11,10 @@ private:
     double arrivalTime;
     double leaveTime;
     double treatmentBegin;
+public:
+    double getTreatmentBegin() const;
+
+private:
     bool active;
 
 public:

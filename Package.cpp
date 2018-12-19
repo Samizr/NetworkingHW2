@@ -24,3 +24,7 @@ double Package::getServiceTime() const {
 void Package::setTreatmentBegin(double treatmentTime) {
     treatmentBegin = treatmentTime;
 }
+
+double Package::getTreatmentBegin() const {
+    return treatmentBegin;
+}

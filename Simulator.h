@@ -24,13 +24,17 @@ private:
     double totalServiceTime;
     std::random_device rd;
     std::default_random_engine generator;
+
     long int calculateAccepted();
+
     long int calculateReceived();
+
     //DEBUG PARAMETERS:
     int overAll, overAllInput, overAllOutput;
 
 public:
-    Simulator(double T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas, vector<int> queueSizes,
+    Simulator(double T, int N, int M, vector<vector<double>> probabilities, vector<double> lambdas,
+              vector<int> queueSizes,
               vector<double> mus);
 
     void run();

@@ -17,8 +17,6 @@ void Simulator::run() {
         double time = event.getTime();
         currentT = time;
 
-        if (overAllInput == 420)
-            int debug;
         //Extract min event out or in queue:
         if (event.isInEvent()) {
             //If input event  --> new Package, processPackage, recievePackage, generate new input event
@@ -34,7 +32,7 @@ void Simulator::run() {
             Package newPackage(time);
             InputChannel *inQueue = event.getInQueue();
             int outChannelNumber = inQueue->processPackage(newPackage, generator);
-            outputQueues[outChannelNumber].receivePackage(newPackage);
+            outputQueues[outChannelNumber].receivePackage(newPackage, time);
         } else if (!event.getOutQueue()->getPackages().empty()){
             //If output event --> packages.popPackage, package.commit, generate new output event
             //DEBUG BEGIN:
@@ -45,12 +43,13 @@ void Simulator::run() {
             assert(event.getInQueue() == nullptr);
             WaitQueue *outQueue = event.getOutQueue();
             Package outPackage = outQueue->popPackage(time);
-            totalServiceTime += outPackage.getWaitingTime();
-            totalWaitTime += outPackage.getServiceTime();
+            assert(outPackage.getTreatmentBegin() != -1);
+            totalServiceTime += outPackage.getServiceTime();
+            totalWaitTime += outPackage.getWaitingTime();
             outQueue->getPackages().begin()->setTreatmentBegin(time);
             //TODO: first top, or first top after free queue, will fail?
         }
-        if (time < T) {
+        if (time < T || (!event.isInEvent() && !event.getOutQueue()->getPackages().empty())) {
             Event newEvent(event.isInEvent(), time, event.getOutQueue(), event.getInQueue());
             eventsHeap.push_back(newEvent);
             std::push_heap(eventsHeap.begin(), eventsHeap.end());
