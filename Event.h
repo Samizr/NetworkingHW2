@@ -17,7 +17,8 @@ private:
 
 public:
     //Event(bool inEvent, double time, WaitQueue *outQueue, InputChannel *inQueue);
-    Event(bool inEvent, double currentTime, WaitQueue *outQueue, InputChannel *inQueue);
+    Event(bool inEvent, double currentTime, WaitQueue *outQueue, InputChannel *inQueue,
+          std::default_random_engine &generator);
     Event();
     bool isInEvent();
     double getTime() const;

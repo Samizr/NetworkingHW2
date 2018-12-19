@@ -12,9 +12,10 @@ bool Event::isInEvent() {
 Event::Event() : inEvent(true), time(-1), outQueue(nullptr), inQueue(nullptr) {
 }
 
-Event::Event(bool inEvent, double currentTime, WaitQueue *outQueue, InputChannel *inQueue)
+Event::Event(bool inEvent, double currentTime, WaitQueue *outQueue, InputChannel *inQueue,
+             std::default_random_engine &generator)
         : inEvent(inEvent), outQueue(outQueue), inQueue(inQueue) {
-    std::random_device generator;
+//    std::random_device generator;
     double addition;
     if (inEvent) {
         std::exponential_distribution<double> distribution(inQueue->getDistributionVariable());

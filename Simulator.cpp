@@ -102,9 +102,6 @@ void Simulator::printResults() {
     //PRINT AVG SERVICE TIME:
     cout << totalServiceTime/(double)numAccepted << endl;
 
-    cout << "AVG Distr: " << ::overallAdditions / (double)overAllInput << endl;
-
-
 }
 
 long int Simulator::calculateAccepted() {

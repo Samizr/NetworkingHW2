@@ -43,12 +43,8 @@ int main(int argc, char *argv[]) {
     simulation.run();
 
     simulation.printResults();
-
-
-
     return 0;
 }
-
 
 vector<vector<double> > parseProbabilities(char *argv[], int *argID, int N, int M) {
     vector<vector<double> > probabilities;
